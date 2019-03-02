@@ -13,3 +13,4 @@ $ composer require phpoffice/phpspreadsheet
 
 ```
 
+prepare database
