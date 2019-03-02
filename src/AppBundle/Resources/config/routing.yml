@@ -1,0 +1,8 @@
+app_user:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+homepage:
+    path:     /
+    defaults: { _controller: "AppBundle:User:index" }
+    methods:  GET

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="wrapper-new-user">
+        <h1>Редактирование</h1>
+
+        {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Изменить" />
+        {{ form_end(edit_form) }}
+
+        <div class="delete-btn">
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Удалить">
+            {{ form_end(delete_form) }}
+        </div>
+        <p>
+            <a href="{{ path('user_index') }}">Вернуться к списку</a>
+        </p>
+    </div>
+{% endblock %}

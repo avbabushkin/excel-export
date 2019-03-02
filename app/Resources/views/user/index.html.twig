@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Список пользователей</h1>
+    <div class="wrapper-export-btn">
+        <a href="{{ path('user_export') }}">export to CSV</a>
+        <a href="{{ path('user_exportxls') }}">export to XSLX</a>
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <div class="wrapper-actions-btn">
+                        <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
+                        <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        <p>
+            <a href="{{ path('user_new') }}">Create a new user</a>
+        </p>
+{% endblock %}

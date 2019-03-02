@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="wrapper-show-user">
+        <h1>Просмотр пользователя</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ user.id }}</td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td>{{ user.name }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ user.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p>
+            <a href="{{ path('user_index') }}">Back to the list</a>
+            <a href="{{ path('user_edit', { 'id': user.id }) }}">Edit</a>
+        </p>
+        <div class="delete-btn">
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </div>
+    </div>
+{% endblock %}
