@@ -1,8 +1,8 @@
 
-export to excel via Sympfony 3.4
+Export to Excel via Symfony 3.4
 ======
 
-###Requirements:
+##Requirements
 ``` bash
 $ composer require egyg33k/csv-bundle
 
