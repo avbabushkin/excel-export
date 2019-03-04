@@ -2,8 +2,8 @@ Export to Excel via Symfony 3.4
 ======
 
 
-#Requirements
-
+Requirements
+------------
 ``` bash
 $ composer require egyg33k/csv-bundle
 
@@ -13,8 +13,8 @@ $ composer require phpoffice/phpspreadsheet
 
 ```
 
-#Prepare database
-
+Prepare database
+----------------
 Change your parameters.yml 
 
 and create database:
