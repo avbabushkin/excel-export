@@ -49,7 +49,7 @@ Ubuntu:
 
     bundle install
 
-> TODO:
+># TODO:
 
   описать подключение к БД
   
